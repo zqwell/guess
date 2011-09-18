@@ -1,11 +1,10 @@
-# Guess - common lisp porting of libguess-1.0 that is a character set detection library.
+# Guess - a character set detection library.
 
-guess は 文字コードを自動で判別する libguess-1.0 を common lisp 向けにポーティングしたライブラリです。
+guess は文字コードの自動判別ライブラリである libguess-1.0 を common lisp 向けにポーティングしたものです.
 
 [LISPUSER  Common Lisp と 日本語 と 文字コード](http://lispuser.net/commonlisp/japanese.html) の onjo さんが
 ポーティングしたライブラリを libguess v1.0 向けに修正し、日本語以外の文字コードの判別ができるようにしています.
 
----
 
 ## Installation
 
@@ -17,7 +16,6 @@ guess は 文字コードを自動で判別する libguess-1.0 を common lisp �
 
     (ql:quickload :guess)
 
----
 
 ## Usage
 
@@ -29,7 +27,7 @@ guess は 文字コードを自動で判別する libguess-1.0 を common lisp �
 	
 * iconv関数:
 
-	(iconv:iconv 変換元の文字コード 変換後の文字コード byte配列)
+	(iconv:iconv 変換元の文字コード 変換後の文字コード byte配列) => 変換後のbyte配列
 
 
 #### 日本語の文字コードを判別する
@@ -66,7 +64,7 @@ ces-guess-from-vector vector scheme  => detected-encoding
 * vector---判別する文字列をbyte配列に変換したもの
 
 *  scheme---識別する言語圏 <br>
-	日本語圏以外に下記をサポートしています。
+	日本語圏以外にも下記をサポートしています.
 	* :jp  --  japanese
 	* :tw  --  taiwanese
 	* :cn  --  chinese
