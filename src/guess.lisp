@@ -115,7 +115,7 @@
 
 (defun ces-guess-from-vector (vector scheme)
   (case scheme
-    (:JP (guess-jp vector)) ;; japanese 
+    (:jp (guess-jp vector)) ;; japanese 
     (:tw (guess-tw vector)) ;; taiwanese
     (:cn (guess-cn vector)) ;; chinese
     (:kr (guess-kr vector)) ;; korean 
@@ -126,8 +126,6 @@
     (:hw (guess-hw vector)) ;; hebrew 
     (:pl (guess-pl vector)) ;; polish 
     (:bl (guess-bl vector)) ;; baltic 
-
-    (:cjk (guess-cjk vector)) ;; cjk
     (t   (error (format nil "scheme parameter (~A): not supported." scheme)))))
 
 
